@@ -27,7 +27,14 @@ const skills = [
     "intro": "One of the most fun tools to use BY FAR.",
     "confidence": 7,
     "years": 2,
-    "daily": "yes",
+    "daily": "no",
+  },
+  {
+    "name": "React / React Native",
+    "intro": "I've worked on one ios app. I primarily worked on the backend, but did play around with the UI.",
+    "confidence": 2,
+    "years": 1,
+    "daily": "no",
   }
 ];
 

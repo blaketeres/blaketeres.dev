@@ -3,7 +3,10 @@ import NavBar from "../components/navbar";
 
 var Base = {
   view: function (vnode) {
-    return m("nav", [m(NavBar)]);
+    return m(".pb-4.sticky-top", [
+        m(NavBar),
+        vnode.children
+    ]);
   },
 };
 

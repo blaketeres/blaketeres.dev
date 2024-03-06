@@ -14,11 +14,12 @@ var CopyEmailButton = {
       {
         onclick: () => {
           navigator.clipboard.writeText(myEmail);
-          vnode.state.btnClass = "bi bi-check text-success"
+          vnode.state.btnClass = "bi bi-check text-success";
           setTimeout(() => {
             vnode.state.btnClass = "bi bi-copy";
             m.redraw();
-          }, 1000)},
+          }, 1000);
+        },
         class: "btn",
         "data-bs-toggle": "tooltip",
         "data-bs-title": "Default tooltip",
@@ -33,12 +34,17 @@ export function view() {
     m(Base),
     m(
       "div",
-      { class: "container-sm pt-5"},
+      {
+        class: "container text-center mx-auto",
+        style: "max-width: 650px;",
+      },
       [
-        m("p", { class: "text-center" }, "Please send an email to ", [
+        m("p", "Let's chat! To set up some time to talk, shoot me an email. "),
+        m("p", [
           m("b", { class: "font-monospace" }, myEmail),
           m(CopyEmailButton),
         ]),
+        m("hr"),
       ]
     ),
   ]);
