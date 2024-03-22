@@ -1,14 +1,16 @@
 import '../scss/styles.scss'
 
 var m = require("mithril")
-var aboutme = require("./views/aboutme.js")
+var about = require("./views/about.js")
 var home = require("./views/home.js")
-var hireme = require("./views/hireme.js")
+var contact = require("./views/contact.js")
 var projects = require("./views/projects.js")
+var services = require("./views/services.js")
 
 m.route(document.body, "/home", {
     "/home": home,
-    "/about-me": aboutme,
+    "/about": about,
+    "/services": services,
     "/projects": projects,
-    "/hire-me": hireme,
+    "/contact": contact,
 })

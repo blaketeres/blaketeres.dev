@@ -42,14 +42,14 @@ var Skills = {
   view: function (vnode) {
     return m("div",
       skills.map((skill, index) => {
-        return [
-          m("h5", skill["name"]),
+        return m("article", [
+          m("h2", skill["name"]),
           m("p", skill["intro"]),
           m("p", "confidence: " + skill["confidence"] + " / 10"),
           m("p", "years: " + skill["years"]),
           m("p", "daily use? " + skill["daily"]),
           m("hr")
-        ]
+        ])
       })
     )
   }

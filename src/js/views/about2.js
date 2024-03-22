@@ -22,7 +22,7 @@ var AboutMeNav = {
                 {
                   class:
                     vnode.state.sectionKey == section[0]
-                      ? "nav-link active"
+                      ? "nav-link active"  // TODO: make this work
                       : "nav-link",
                   href: "#/about-me/".concat(section[1]),
                 },

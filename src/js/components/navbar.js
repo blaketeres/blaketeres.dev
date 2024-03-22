@@ -22,9 +22,10 @@ var DarkModeSwitch = {
 };
 
 const tabs = [
-  ["About Me", "/about-me"],
-  ["Projects", "/projects"],
-  ["Hire Me", "/hire-me"],
+  ["About", "about"],
+  ["Services", "services"],
+  ["Projects", "projects"],
+  ["Contact", "contact"],
 ];
 
 var NavBar = {
@@ -48,18 +49,19 @@ var NavBar = {
         m("div.collapse.navbar-collapse", { id: "navbarSupportedContent" }, [
           m(
             ".navbar-nav.mx-auto",
-            [m("a.navbar-brand", { href: "#/home" }, "Home")],
-            tabs.map((tab, index) => {
-              return m(
-                "a",
-                {
-                  class: activeTab == tab[1] ? "nav-link active" : "nav-link",
-                  "aria-current": activeTab == tab[1] ? "page" : "false",
-                  href: "#".concat(tab[1]),
-                },
-                tab[0]
-              );
-            })
+            [m("a.navbar-brand.px-4", { href: "#/home" }, "BT")].concat(
+              tabs.map((tab, index) => {
+                return m(
+                  "a.px-3",
+                  {
+                    class: activeTab == tab[1] ? "nav-link active" : "nav-link",
+                    "aria-current": activeTab == tab[1] ? "page" : "false",
+                    href: "#/".concat(tab[1]),
+                  },
+                  tab[0]
+                );
+              })
+            )
           ),
         ]),
       ]),

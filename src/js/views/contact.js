@@ -1,6 +1,6 @@
 import m from "mithril";
 import Base from "../components/base";
-import bootstrap from "../../../node_modules/bootstrap/dist/js/bootstrap";
+import bootstrap from "bootstrap";
 
 const myEmail = "blaketeres@gmail.com";
 
@@ -10,7 +10,7 @@ var CopyEmailButton = {
   },
   view: function (vnode) {
     return m(
-      "button",
+      "button.btn",
       {
         onclick: () => {
           navigator.clipboard.writeText(myEmail);
@@ -20,9 +20,6 @@ var CopyEmailButton = {
             m.redraw();
           }, 1000);
         },
-        class: "btn",
-        "data-bs-toggle": "tooltip",
-        "data-bs-title": "Default tooltip",
       },
       [m("i", { class: vnode.state.btnClass })]
     );
