@@ -1,4 +1,5 @@
 import m from "mithril";
+import Palm from "../../../static/palm.png";
 
 const tabs = [["projects", "projects"]];
 
@@ -22,11 +23,17 @@ var NavBar = {
         ),
         m("div.collapse.navbar-collapse", { id: "navbarSupportedContent" }, [
           m(
-            ".navbar-nav.mx-auto",
-            [m("a.navbar-brand", { href: "#/home" }, "🌴 BT")].concat(
+            ".navbar-nav.mx-auto.py-2",
+            [
+              m(
+                "a.navbar-brand",
+                { href: "#/home" },
+                m("img.pe-2", { src: Palm, alt: "Palm", height: "24" })
+              ),
+            ].concat(
               tabs.map((tab, index) => {
                 return m(
-                  "a.px-3",
+                  "a",
                   {
                     class: activeTab == tab[1] ? "nav-link active" : "nav-link",
                     "aria-current": activeTab == tab[1] ? "page" : "false",

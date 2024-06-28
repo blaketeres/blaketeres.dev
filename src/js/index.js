@@ -1,4 +1,5 @@
 import '../scss/styles.scss'
+import 'bootstrap'
 
 var m = require("mithril")
 var home = require("./views/home.js")
