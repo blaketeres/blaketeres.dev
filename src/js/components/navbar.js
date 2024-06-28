@@ -1,7 +1,7 @@
 import m from "mithril";
 import Palm from "../../../static/palm.png";
 
-const tabs = [["projects", "projects"]];
+const tabs = ["projects", "misc"];
 
 var NavBar = {
   view: function (vnode) {
@@ -27,19 +27,19 @@ var NavBar = {
             [
               m(
                 "a.navbar-brand",
-                { href: "#/home" },
+                { href: "#" },
                 m("img.pe-2", { src: Palm, alt: "Palm", height: "24" })
               ),
             ].concat(
-              tabs.map((tab, index) => {
+              tabs.map((tab) => {
                 return m(
-                  "a",
+                  "a.pe-4",
                   {
-                    class: activeTab == tab[1] ? "nav-link active" : "nav-link",
-                    "aria-current": activeTab == tab[1] ? "page" : "false",
-                    href: "#/".concat(tab[1]),
+                    class: activeTab == tab ? "nav-link active" : "nav-link",
+                    "aria-current": activeTab == tab ? "page" : "false",
+                    href: "#/".concat(tab),
                   },
-                  tab[0]
+                  tab
                 );
               })
             )
