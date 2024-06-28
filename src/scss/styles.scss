@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+$font-family-base: Quicksand;
+
+// .list-group-item.active {
+//   background-color: rgb(3, 44, 3) !important;
+//   border-color: rgb(57, 77, 54) !important;
+// }
+
+div#services-content {
+    max-height: 80vh;          /* not available in Bootstrap */
+    overflow-y: scroll;
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap-icons/font/bootstrap-icons.css";
-
-
-.highlight {
-  &:hover {
-    color: rgb(0, 157, 47);
-  }
-}

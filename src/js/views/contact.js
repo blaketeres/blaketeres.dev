@@ -1,6 +1,5 @@
 import m from "mithril";
 import Base from "../components/base";
-import bootstrap from "bootstrap";
 
 const myEmail = "blaketeres@gmail.com";
 
@@ -29,20 +28,13 @@ var CopyEmailButton = {
 export function view() {
   return m("main", [
     m(Base),
-    m(
-      "div",
-      {
-        class: "container text-center mx-auto",
-        style: "max-width: 650px;",
-      },
-      [
-        m("p", "Let's chat! To set up some time to talk, shoot me an email. "),
-        m("p", [
-          m("b", { class: "font-monospace" }, myEmail),
-          m(CopyEmailButton),
-        ]),
-        m("hr"),
-      ]
-    ),
+    m("div.container-sm", [
+      m("h1.display-3.pb-5", "contact"),
+      m("p", "Let's chat! To set up some time to talk, shoot me an email. "),
+      m("p", [
+        m("b", { class: "font-monospace" }, myEmail),
+        m(CopyEmailButton),
+      ])
+    ]),
   ]);
 }

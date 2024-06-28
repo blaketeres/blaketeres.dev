@@ -1,31 +1,10 @@
 import m from "mithril";
 
-var DarkModeSwitch = {
-  oninit: function (vnode) {
-    vnode.state.enabled = vnode.attrs.enabled;
-  },
-  view: function (vnode) {
-    var icon = vnode.state.enabled ? "🌙" : "☀️";
-
-    return m(
-      "a",
-      {
-        class: "button-outline",
-        href: "javascript:void(0)",
-        onclick: (el) => {
-          el.enabled = !el.enabled;
-        },
-      },
-      icon
-    );
-  },
-};
-
 const tabs = [
-  ["About", "about"],
-  ["Services", "services"],
-  ["Projects", "projects"],
-  ["Contact", "contact"],
+  ["about", "about"],
+  // ["services", "services"],
+  ["projects", "projects"],
+  // ["contact", "contact"],
 ];
 
 var NavBar = {

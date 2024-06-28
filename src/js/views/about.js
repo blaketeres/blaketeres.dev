@@ -1,80 +1,75 @@
 import m from "mithril";
 import Base from "../components/base";
 
-const sections = [
-  ["people", "#people"],
-  ["mission", "#mission"],
-]
+const myEmail = "blaketeres@gmail.com";
 
-var people = [
-  {
-    name: "Blake Teres",
-    description: [
-      "Hi, ☝️ that's me. I'm the founder of <name>. I've been working as a full-time software engineer after \
-      graduating from American University in 2017.",
-      "I started my career at a small defense contractor improving \
-      acoustic modeling algorithms to be used for submarine detection from surface-level ships. I then moved \
-      to backend web development, where I helped manage a MASSIVE legacy homegrown back-office application for \
-      an architecture software firm. Currently, I'm a senior backend developer at a startup in the agtech industry.",
-      "Through all the changes, the things that have remained consistent are my love for challenges and my love for \
-      learning. And blackberry margaritas. Enjoy the pictures of my dog, Luna."
-    ],
-    github: "https://github.com/blaketeres",
-    linkedin: "https://www.linkedin.com/in/blake-teres/",
-    stackoverflow: "https://stackoverflow.com/users/7559627/blake",
+var CopyEmailButton = {
+  oninit: function (vnode) {
+    vnode.state.btnClass = "bi bi-copy";
   },
-];
-
-var People = {
   view: function (vnode) {
     return m(
-      "div.pt-4",
-      people.map((person) => {
-        return m("article", [
-          m("h3", person["name"], [
-            m("span.px-4", [
-              m("a", { href: person["github"] }, [
-                m("button.btn", [m("i.bi.bi-github")]),
-              ]),
-              m("a", { href: person["linkedin"]}, [
-                m("button.btn", [m("i.bi.bi-linkedin")]),
-              ]),
-              m("a", { href: person["stackoverflow"]}, [
-                m("button.btn", [m("i.bi.bi-stack-overflow")]),
-              ]),
-            ])
-          ]),
-          person["description"].map((paragraph) => {
-            return m("p", paragraph);
-          })
-        ]);
-      })
+      "button.btn",
+      {
+        onclick: () => {
+          navigator.clipboard.writeText(myEmail);
+          vnode.state.btnClass = "bi bi-check text-success";
+          setTimeout(() => {
+            vnode.state.btnClass = "bi bi-copy";
+            m.redraw();
+          }, 1000);
+        },
+      },
+      [m("i", { class: vnode.state.btnClass })]
     );
   },
 };
 
-var Mission = {
+var info = {
+  name: "Blake Teres",
+  description: [
+    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque dapibus augue sed neque. Duis ligula sem, \
+    commodo vel, pellentesque vitae, gravida et, eros. Aliquam pellentesque nulla non lacus. Quisque at lorem ac \
+    mauris accumsan pulvinar. Vivamus bibendum turpis id augue. ",
+  ],
+  github: "https://github.com/blaketeres",
+  linkedin: "https://www.linkedin.com/in/blake-teres/",
+  stackoverflow: "https://stackoverflow.com/users/7559627/blake",
+  email: myEmail,
+};
+
+var About = {
   view: function (vnode) {
-    return m("div.pt-4", [
-      m("p.lead", "To solve technical problems for people who are bettering the world."),
-    ])
+    return m("div", [
+      m(
+        "article.pb-5",
+        info["description"].map((paragraph) => {
+          return m("p", paragraph);
+        })
+      ),
+      m("div.d-inline-flex", [
+        // m("h3", info["name"]),
+        // m("p.ps-5.my-auto.pe-5", "⋰"),
+        m("p.font-monospace.my-auto", info["email"]),
+        m(CopyEmailButton),
+        m("p.ps-5.my-auto.pe-5", "⋰"),
+        m("a.my-auto", { href: info["github"] }, [
+          m("button.btn", [m("i.bi.bi-github")]),
+        ]),
+        m("a.my-auto", { href: info["linkedin"] }, [
+          m("button.btn", [m("i.bi.bi-linkedin")]),
+        ]),
+        m("a.my-auto", { href: info["stackoverflow"] }, [
+          m("button.btn", [m("i.bi.bi-stack-overflow")]),
+        ]),
+      ]),
+    ]);
   },
 };
 
 export function view() {
   return m("main", [
     m(Base),
-    m(
-      "div.container-sm",
-      [
-        m("h1", "About"),
-        m("h2.display-3.py-4", "mission"),
-        m(Mission),
-        m("hr"),
-        m("h2.display-3.py-4", "people"),
-        m("p", "Note: <name> is currently a solo operation. As we grow, this section will be updated."),
-        m(People)
-      ]
-    ),
+    m("div.container-sm", [m("h1.display-3.pb-5", "about"), m(About)]),
   ]);
 }
