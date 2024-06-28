@@ -28,9 +28,13 @@ var CopyEmailButton = {
 var info = {
   name: "Blake Teres",
   description: [
-    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque dapibus augue sed neque. Duis ligula sem, \
-    commodo vel, pellentesque vitae, gravida et, eros. Aliquam pellentesque nulla non lacus. Quisque at lorem ac \
-    mauris accumsan pulvinar. Vivamus bibendum turpis id augue. ",
+    "I'm just a regular Florida dude who likes to code.",
+    "I use Python because that's what I know best, but whatever gets the job done will do.",
+    "My perfect day includes sipping a blackberry margarita on the beach with my wife and my dog (see dog pictures below).",
+    "Highlights of my experience: GIS, backend web dev, computational geometry, acoustic signal processing, \
+    cloud services, and a bunch of other stuff.",
+    "I want to help those who are bettering the world.",
+    "Reach out! Send me a message and say hi!"
   ],
   github: "https://github.com/blaketeres",
   linkedin: "https://www.linkedin.com/in/blake-teres/",
@@ -48,8 +52,6 @@ var About = {
         })
       ),
       m("div.d-inline-flex", [
-        // m("h3", info["name"]),
-        // m("p.ps-5.my-auto.pe-5", "⋰"),
         m("p.font-monospace.my-auto", info["email"]),
         m(CopyEmailButton),
         m("p.ps-5.my-auto.pe-5", "⋰"),

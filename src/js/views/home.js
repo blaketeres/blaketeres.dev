@@ -11,6 +11,7 @@ export function view() {
         m("h1.display-3.pb-5", "blake teres"),
         m("h2.h4", "software engineer"),
         m("h2.h4", "florida man"),
+        m("h2.h4", "human"),
       ]
     ),
   ]);
