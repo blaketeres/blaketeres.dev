@@ -51,7 +51,7 @@ var About = {
           return m("p", paragraph);
         })
       ),
-      m("div.d-inline-flex", [
+      m("div.mx-auto.d-inline-flex", [
         m("p.font-monospace.my-auto", info["email"]),
         m(CopyEmailButton),
         m("p.ps-5.my-auto.pe-5", "⋰"),
