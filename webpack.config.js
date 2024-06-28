@@ -3,6 +3,7 @@
 const path = require("path");
 const autoprefixer = require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   mode: "development",
@@ -17,10 +18,10 @@ module.exports = {
     hot: true,
   },
   plugins: [
-    new HtmlWebpackPlugin(
-      { template: "./src/index.html" },
-      { favicon: "./static/favicon.ico" }
-    ),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+    new FaviconsWebpackPlugin("./static/favicon.ico")
   ],
   module: {
     rules: [
