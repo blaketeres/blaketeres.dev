@@ -1,11 +1,6 @@
 import m from "mithril";
 
-const tabs = [
-  // ["about", "about"],
-  // ["services", "services"],
-  ["projects", "projects"],
-  // ["contact", "contact"],
-];
+const tabs = [["projects", "projects"]];
 
 var NavBar = {
   view: function (vnode) {

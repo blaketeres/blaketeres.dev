@@ -16,14 +16,19 @@ module.exports = {
     port: 8080,
     hot: true,
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin(
+      { template: "./src/index.html" },
+      { favicon: "./static/favicon.ico" }
+    ),
+  ],
   module: {
     rules: [
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
           },
         ],
       },
