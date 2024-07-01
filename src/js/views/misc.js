@@ -22,7 +22,7 @@ var Misc = {
           m(
             "a",
             {
-              href: "https://example.com",
+              href: "https://blaketeres-dev-public.s3.amazonaws.com/Blake+Teres+-+Resume.pdf",
             },
             [m("button.btn", [m("i.bi.bi-file-earmark-pdf-fill")])]
           ),
