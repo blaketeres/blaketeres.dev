@@ -6,18 +6,6 @@ var Misc = {
     return m("ul", [
       m("li", [
         m("div.d-inline-flex", [
-          m("p.my-auto", "Euronoise 2018"),
-          m(
-            "a",
-            {
-              href: "https://blaketeres-dev-public.s3.amazonaws.com/350_Euronoise2018.pdf",
-            },
-            [m("button.btn", [m("i.bi.bi-file-earmark-pdf-fill")])]
-          ),
-        ]),
-      ]),
-			m("li", [
-        m("div.d-inline-flex", [
           m("p.my-auto", "Resume"),
           m(
             "a",
@@ -26,6 +14,18 @@ var Misc = {
             },
             [m("button.btn", [m("i.bi.bi-file-earmark-pdf-fill")])]
           ),
+        ]),
+        m("li", [
+          m("div.d-inline-flex", [
+            m("p.my-auto", "Euronoise 2018"),
+            m(
+              "a",
+              {
+                href: "https://blaketeres-dev-public.s3.amazonaws.com/350_Euronoise2018.pdf",
+              },
+              [m("button.btn", [m("i.bi.bi-file-earmark-pdf-fill")])]
+            ),
+          ]),
         ]),
       ]),
     ]);

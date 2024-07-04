@@ -4,10 +4,10 @@ import AppStoreIcon from "../../../static/AppStoreBlack.svg";
 
 const projects = [
   {
-    name: "this website",
+    name: "blaketeres.dev",
     github: "https://github.com/blaketeres/blaketeres.dev",
     description:
-      "For more information on how I built this website, see <either eventual blog post or readme>",
+      "This is the website you are looking at right now. Check out the README for how I built it.",
   },
   {
     name: "the r&i guys",
