@@ -1,5 +1,3 @@
-blaketeres.dev
-
 # About
 This is my personal website. It's main purpose is to put myself out there as a developer and to showcase some of the things I work on.
 
@@ -26,14 +24,16 @@ As a backend developer, I really didn't know what the best way to get a static s
       Pushes to the `main` branch of this repository AUTOMATICALLY BUILDS, DEPLOYS, and SERVES my site, all for free. Additionally, you can manage domain names and SSL/TLS certificates
       right there in your portal. By far, this is the easiest and quickest solution for low-traffic static sites I've ever come across.
 
+      While I considered serving custom containers on AWS/GCP, I didn't want to deal with all that. I wanted to use a consumer-grade product that was just ready to host my code. `netlify`
+      did just that.
+
 - Storage: [`AWS`](https://aws.amazon.com/)
-    - Everyone knows how this works. I have a read-only public S3 bucket. I dropped some files in there and link to them on the site. No need for anything fancy.
+    - I have an AWS account with a read-only public S3 bucket. I dropped some files in there and link to them on the site. No need for anything fancy.
  
 
 ## Palm Tree Credits
 "Palms" by fryhet licensed CC0: https://opengameart.org/content/palms
 
 <hr>
-
 
 That's really it. It's a simple project.
