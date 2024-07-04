@@ -10,7 +10,7 @@ var Misc = {
           m(
             "a",
             {
-              href: "https://blaketeres-dev-public.s3.amazonaws.com/Blake+Teres+-+Resume.pdf",
+              href: "https://blaketeres-dev-public.s3.amazonaws.com/Resume+2024.pdf",
             },
             [m("button.btn", [m("i.bi.bi-file-earmark-pdf-fill")])]
           ),
