@@ -67,7 +67,7 @@ var Content = {
       m("div.pb-5", m(About)),
       m("div", [
         m("div.d-inline-flex", [
-          m("p.font-monospace.my-auto", info["email"]),
+          m("p.my-auto", info["email"]),
           m(CopyEmailButton),
         ]),
       ]),

@@ -27,7 +27,11 @@ var NavBar = {
             [
               m(
                 "a.navbar-brand",
-                { href: "#" },
+                {
+                  href: "#",
+                  class: activeTab == "" ? "nav-link active" : "nav-link",
+                  "aria-current": activeTab == "" ? "page" : "false",
+                },
                 m("img.pe-2", { src: Palm, alt: "Palm", height: "24" })
               ),
             ].concat(
@@ -35,9 +39,9 @@ var NavBar = {
                 return m(
                   "a.pe-4",
                   {
+                    href: "#/".concat(tab),
                     class: activeTab == tab ? "nav-link active" : "nav-link",
                     "aria-current": activeTab == tab ? "page" : "false",
-                    href: "#/".concat(tab),
                   },
                   tab
                 );
