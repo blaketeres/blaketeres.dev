@@ -2,6 +2,37 @@ import m from "mithril";
 import Base from "../components/base";
 import AppStoreIcon from "../../../static/AppStoreBlack.svg";
 
+var Misc = {
+  view: function (vnode) {
+    return m("ul.list-unstyled", [
+      m("li", [
+        m("div.d-inline-flex", [
+          m("p.my-auto", "Resume"),
+          m(
+            "a",
+            {
+              href: "https://blaketeres-dev-public.s3.amazonaws.com/Resume+2024.pdf",
+            },
+            [m("button.btn", [m("i.bi.bi-file-earmark-pdf-fill")])]
+          ),
+        ]),
+        m("li", [
+          m("div.d-inline-flex", [
+            m("p.my-auto", "Euronoise 2018"),
+            m(
+              "a",
+              {
+                href: "https://blaketeres-dev-public.s3.amazonaws.com/350_Euronoise2018.pdf",
+              },
+              [m("button.btn", [m("i.bi.bi-file-earmark-pdf-fill")])]
+            ),
+          ]),
+        ]),
+      ]),
+    ]);
+  },
+};
+
 const projects = [
   {
     name: "blaketeres.dev",
@@ -36,7 +67,9 @@ var Projects = {
         const appStoreLink = [
           m("span.px-4", [
             m("a", { href: project["appStore"] }, [
-              m("button.btn", [m('img', { src: AppStoreIcon, alt: "App Store" })]),
+              m("button.btn", [
+                m("img", { src: AppStoreIcon, alt: "App Store" }),
+              ]),
             ]),
           ]),
         ];
@@ -59,7 +92,11 @@ var Projects = {
 
 export function view() {
   return m("main", [
-    m(Base),
-    m("div.container-sm", [m("h1.display-3.pb-5", "projects"), m(Projects)]),
+    m(Base, [
+      // fill this in with stuff about me!
+      // ALSO move the publication link somewhere that makes sense (maybe just linkedin :/)
+      m("h1.display-3.pb-3.text-center", "projects"),
+      m(".div", m(Projects)),
+    ]),
   ]);
 }

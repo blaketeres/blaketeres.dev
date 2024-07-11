@@ -11850,8 +11850,8 @@ textarea.form-control-lg {
 [data-bs-theme=palms] {
   --bs-body-color: #000000;
   --bs-body-color-rgb: 0, 0, 0;
-  --bs-body-bg: #bec88e;
-  --bs-body-bg-rgb: 190, 200, 142;
+  --bs-body-bg: #cdd5a5;
+  --bs-body-bg-rgb: 205, 213, 165;
   --bs-tertiary-color: #000000;
   --bs-tertiary-color-rgb: #000000;
   --bs-tertiary-bg: #67b5d7;
@@ -11860,14 +11860,24 @@ textarea.form-control-lg {
 }
 [data-bs-theme=palms] .nav-link {
   --bs-nav-link-color: #000000;
-  --bs-nav-link-hover-color: #264e76;
-  --bs-navbar-active-color: #264e76;
+  --bs-nav-link-hover-color: #0d4229;
+  --bs-navbar-active-color: #0d4229;
   font-family: Pixelify Sans;
+  font-size: 18px;
 }
 [data-bs-theme=palms] .navbar {
   border-color: #0c1847;
   border-width: 0px 0px 2px 0px;
   border-style: solid;
+}
+[data-bs-theme=palms] .footer {
+  background-color: #d27cc1;
+  border-color: #000000;
+  border-width: 3px 0px 0px 0px;
+  border-style: solid;
+}
+[data-bs-theme=palms] .main-content {
+  padding-bottom: 80px;
 }
 
 /*# sourceMappingURL=custom.css.map */

@@ -1,7 +1,10 @@
 import m from "mithril";
 import Palm from "../../../static/palm.png";
 
-const tabs = ["projects", "misc"];
+const tabs = [
+  ["about", "about"],
+  ["hire me", "hire-me"],
+];
 
 var NavBar = {
   view: function (vnode) {
@@ -32,18 +35,18 @@ var NavBar = {
                   class: activeTab == "" ? "nav-link active" : "nav-link",
                   "aria-current": activeTab == "" ? "page" : "false",
                 },
-                m("img.pe-2", { src: Palm, alt: "Palm", height: "24" })
+                m("img.me-2", { src: Palm, alt: "Palm", height: "24" })
               ),
             ].concat(
               tabs.map((tab) => {
                 return m(
-                  "a.pe-4",
+                  "a.me-3",
                   {
-                    href: "#/".concat(tab),
-                    class: activeTab == tab ? "nav-link active" : "nav-link",
-                    "aria-current": activeTab == tab ? "page" : "false",
+                    href: "#/".concat(tab[1]),
+                    class: activeTab == tab[1] ? "nav-link active" : "nav-link",
+                    "aria-current": activeTab == tab[1] ? "page" : "false",
                   },
-                  tab
+                  tab[0]
                 );
               })
             )

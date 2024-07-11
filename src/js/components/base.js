@@ -1,11 +1,17 @@
 import m from "mithril";
 import NavBar from "../components/navbar";
+import ContactBar from "./contactBar";
+import { bottom } from "@popperjs/core";
+
 
 var Base = {
   view: function (vnode) {
-    return m(".pb-4.sticky-top.body", [
-        m(NavBar),
-        vnode.children
+    return m(".sticky-top.body", [
+      m(NavBar),
+      m(".container-sm.pt-5.main-content", [
+        vnode.children,
+        m(".fixed-bottom.footer", m(ContactBar)),
+      ]),
     ]);
   },
 };
