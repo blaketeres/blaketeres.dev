@@ -11850,8 +11850,8 @@ textarea.form-control-lg {
 [data-bs-theme=palms] {
   --bs-body-color: #000000;
   --bs-body-color-rgb: 0, 0, 0;
-  --bs-body-bg: #cdd5a5;
-  --bs-body-bg-rgb: 205, 213, 165;
+  --bs-body-bg: #dfe5a6;
+  --bs-body-bg-rgb: 223, 229, 166;
   --bs-tertiary-color: #000000;
   --bs-tertiary-color-rgb: #000000;
   --bs-tertiary-bg: #67b5d7;

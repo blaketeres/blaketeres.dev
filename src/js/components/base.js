@@ -1,7 +1,6 @@
 import m from "mithril";
 import NavBar from "../components/navbar";
 import ContactBar from "./contactBar";
-import { bottom } from "@popperjs/core";
 
 
 var Base = {

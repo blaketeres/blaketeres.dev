@@ -5,10 +5,6 @@ var info = {
   name: "Blake Teres",
   description: [
     "I'm just a regular Florida dude who likes to code.",
-    // "I use Python because that's what I know best, but whatever gets the job done will do.",
-    "My perfect day includes sipping a blackberry margarita on the beach with my wife and my dog.",
-    // "Technical highlights: GIS, backend web dev, computational geometry, acoustic signal processing, \
-    // cloud services, and plenty more.",
     "I want to help those who are bettering the world.",
     "Reach out! Send me a message and say hi!",
   ],
